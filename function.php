@@ -18,10 +18,7 @@ add_action( 'wp_enqueue_scripts', function (){
 
 add_action( 'wp_print_scripts', function () 
  { 
-    // if ( is_page('YOUR PAGE NAME') ) 
-    //   {
         wp_deregister_script( 'zoom' ); //disable default woocommerce zoom script
-      // } 
  }, 999 );
 
  
@@ -37,10 +34,5 @@ add_filter('woocommerce_single_product_image_thumbnail_html',function($html,$pos
       <div width="'.$full_src[1].'" height="'.$full_src[2].'" class="magnifiermobile"style="background-image: url('.$full_src[0].');"
       ></div></a></div>';
 	}
-	// echo "\n\n\n\n\n\n\n\n";
-
-	// print_r($html);
-	// die();
-
 	return $html;
 },99,2);
