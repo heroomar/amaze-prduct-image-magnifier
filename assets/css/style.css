@@ -49,3 +49,6 @@
     display: none !important;
   }
 }
+.woocommerce-product-gallery__image a {
+	cursor: none;
+}
